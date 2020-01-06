@@ -12,6 +12,7 @@ import SearchBar from "../elements/SearchBar/SearchBar";
 import FourColGrid from "../elements/FourColGrid/FourColGrid";
 import Spinner from "../elements/Spinner/Spinner";
 import LoadMoreBtn from "../elements/LoadMoreBtn/LoadMoreBtn";
+import JsonPlaceholder from "../elements/JsonPlaceholder/JsonPlaceholder";
 
 class Home extends Component {
   state = {
@@ -64,6 +65,7 @@ class Home extends Component {
           title={this.state.heroImage.original_title}
           text={this.state.heroImage.overview}
           />
+          <JsonPlaceholder/>
           <SearchBar />
         </div>: null}
         <FourColGrid />
