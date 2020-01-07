@@ -40,7 +40,7 @@ class JsonPlaceholder extends Component {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              width: "1170px",
+              width: "1000px",
               margin: "auto"
             }}
           >
