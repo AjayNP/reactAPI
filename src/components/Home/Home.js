@@ -13,6 +13,7 @@ import FourColGrid from "../elements/FourColGrid/FourColGrid";
 import Spinner from "../elements/Spinner/Spinner";
 import LoadMoreBtn from "../elements/LoadMoreBtn/LoadMoreBtn";
 import JsonPlaceholder from "../elements/JsonPlaceholder/JsonPlaceholder";
+import CommentAPI from "../elements/JsonPlaceholder/CommentsAPI";
 
 class Home extends Component {
   state = {
@@ -59,18 +60,23 @@ class Home extends Component {
   render() {
     return (
       <div className="rmdb-home">
-          {this.state.heroImage ? 
-        <div>
-          <HeroImage image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
-          title={this.state.heroImage.original_title}
-          text={this.state.heroImage.overview}
-          />
-          <JsonPlaceholder/>
-          <SearchBar />
-        </div>: null}
+        {this.state.heroImage ? (
+          <div>
+            <HeroImage
+              image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.heroImage.backdrop_path}`}
+              title={this.state.heroImage.original_title}
+              text={this.state.heroImage.overview}
+            />
+
+           
+          </div>
+        ) : null}
+        {/* <CommentAPI/> */}
+        <JsonPlaceholder />
+        {/* <SearchBar />
         <FourColGrid />
         <Spinner />
-        <LoadMoreBtn />
+        <LoadMoreBtn /> */}
       </div>
     );
   }
